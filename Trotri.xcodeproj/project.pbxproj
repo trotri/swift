@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D40B7A5A1F2EE10B0099E15A /* BaseHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40B7A591F2EE10B0099E15A /* BaseHttp.swift */; };
+		D40B7A601F2EF3F20099E15A /* BookEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40B7A5F1F2EF3F20099E15A /* BookEntity.swift */; };
+		D40B7A621F2EF77F0099E15A /* BookHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40B7A611F2EF77F0099E15A /* BookHttp.swift */; };
 		D41C89581F2AD3F500FFA440 /* DataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41C89571F2AD3F500FFA440 /* DataResult.swift */; };
 		D41C895C1F2AE9C100FFA440 /* DataHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41C895B1F2AE9C100FFA440 /* DataHttp.swift */; };
 		D41C895E1F2AEA8300FFA440 /* DataListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41C895D1F2AEA8300FFA440 /* DataListResult.swift */; };
 		D48CE2E71F2B0B980022B123 /* RuntimeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48CE2E61F2B0B980022B123 /* RuntimeError.swift */; };
 		D48CE2E91F2B0F160022B123 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48CE2E81F2B0F160022B123 /* DataError.swift */; };
 		D48CE2EB1F2B12640022B123 /* DataListHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48CE2EA1F2B12640022B123 /* DataListHttp.swift */; };
+		D48CE2F01F2B412A0022B123 /* Urls.plist in Resources */ = {isa = PBXBuildFile; fileRef = D48CE2EF1F2B412A0022B123 /* Urls.plist */; };
+		D48CE2F41F2B4ECB0022B123 /* PListReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48CE2F31F2B4ECB0022B123 /* PListReader.swift */; };
 		D49CD4201F29DC8F00DAC21B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49CD41F1F29DC8F00DAC21B /* AppDelegate.swift */; };
 		D49CD4221F29DC8F00DAC21B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49CD4211F29DC8F00DAC21B /* ViewController.swift */; };
 		D49CD4251F29DC8F00DAC21B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49CD4231F29DC8F00DAC21B /* Main.storyboard */; };
@@ -28,12 +33,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D40B7A591F2EE10B0099E15A /* BaseHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseHttp.swift; sourceTree = "<group>"; };
+		D40B7A5F1F2EF3F20099E15A /* BookEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookEntity.swift; sourceTree = "<group>"; };
+		D40B7A611F2EF77F0099E15A /* BookHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookHttp.swift; sourceTree = "<group>"; };
 		D41C89571F2AD3F500FFA440 /* DataResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataResult.swift; sourceTree = "<group>"; };
 		D41C895B1F2AE9C100FFA440 /* DataHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHttp.swift; sourceTree = "<group>"; };
 		D41C895D1F2AEA8300FFA440 /* DataListResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataListResult.swift; sourceTree = "<group>"; };
 		D48CE2E61F2B0B980022B123 /* RuntimeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuntimeError.swift; sourceTree = "<group>"; };
 		D48CE2E81F2B0F160022B123 /* DataError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
 		D48CE2EA1F2B12640022B123 /* DataListHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataListHttp.swift; sourceTree = "<group>"; };
+		D48CE2EF1F2B412A0022B123 /* Urls.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Urls.plist; sourceTree = "<group>"; };
+		D48CE2F31F2B4ECB0022B123 /* PListReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PListReader.swift; sourceTree = "<group>"; };
 		D49CD41C1F29DC8F00DAC21B /* Trotri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trotri.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49CD41F1F29DC8F00DAC21B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D49CD4211F29DC8F00DAC21B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +71,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D40B7A521F2EDF220099E15A /* library */ = {
+			isa = PBXGroup;
+			children = (
+				D40B7A581F2EE0FC0099E15A /* base */,
+			);
+			path = library;
+			sourceTree = "<group>";
+		};
+		D40B7A581F2EE0FC0099E15A /* base */ = {
+			isa = PBXGroup;
+			children = (
+				D40B7A591F2EE10B0099E15A /* BaseHttp.swift */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		D40B7A5B1F2EF3AC0099E15A /* sample */ = {
+			isa = PBXGroup;
+			children = (
+				D40B7A5C1F2EF3AC0099E15A /* data */,
+			);
+			path = sample;
+			sourceTree = "<group>";
+		};
+		D40B7A5C1F2EF3AC0099E15A /* data */ = {
+			isa = PBXGroup;
+			children = (
+				D40B7A5D1F2EF3AC0099E15A /* entity */,
+				D40B7A5E1F2EF3AC0099E15A /* http */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		D40B7A5D1F2EF3AC0099E15A /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				D40B7A5F1F2EF3F20099E15A /* BookEntity.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		D40B7A5E1F2EF3AC0099E15A /* http */ = {
+			isa = PBXGroup;
+			children = (
+				D40B7A611F2EF77F0099E15A /* BookHttp.swift */,
+			);
+			path = http;
+			sourceTree = "<group>";
+		};
+		D48CE2EC1F2B3EA90022B123 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				D48CE2ED1F2B3EA90022B123 /* drawable */,
+				D48CE2EE1F2B3EA90022B123 /* values */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		D48CE2ED1F2B3EA90022B123 /* drawable */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = drawable;
+			sourceTree = "<group>";
+		};
+		D48CE2EE1F2B3EA90022B123 /* values */ = {
+			isa = PBXGroup;
+			children = (
+				D48CE2EF1F2B412A0022B123 /* Urls.plist */,
+			);
+			path = values;
+			sourceTree = "<group>";
+		};
 		D49CD4131F29DC8F00DAC21B = {
 			isa = PBXGroup;
 			children = (
@@ -80,7 +163,10 @@
 		D49CD41E1F29DC8F00DAC21B /* Trotri */ = {
 			isa = PBXGroup;
 			children = (
+				D40B7A5B1F2EF3AC0099E15A /* sample */,
+				D40B7A521F2EDF220099E15A /* library */,
 				D4D28CD91F29E2A3005817F8 /* tfc */,
+				D48CE2EC1F2B3EA90022B123 /* res */,
 				D49CD41F1F29DC8F00DAC21B /* AppDelegate.swift */,
 				D49CD4211F29DC8F00DAC21B /* ViewController.swift */,
 				D49CD4231F29DC8F00DAC21B /* Main.storyboard */,
@@ -108,6 +194,7 @@
 				D4D28CEB1F29F0FA005817F8 /* ErrorNo.swift */,
 				D4D28CED1F29F13D005817F8 /* ErrorMsg.swift */,
 				D48CE2E61F2B0B980022B123 /* RuntimeError.swift */,
+				D48CE2F31F2B4ECB0022B123 /* PListReader.swift */,
 			);
 			path = ap;
 			sourceTree = "<group>";
@@ -197,6 +284,7 @@
 			files = (
 				D49CD42A1F29DC8F00DAC21B /* LaunchScreen.storyboard in Resources */,
 				D49CD4271F29DC8F00DAC21B /* Assets.xcassets in Resources */,
+				D48CE2F01F2B412A0022B123 /* Urls.plist in Resources */,
 				D49CD4251F29DC8F00DAC21B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,10 +303,14 @@
 				D48CE2E91F2B0F160022B123 /* DataError.swift in Sources */,
 				D48CE2EB1F2B12640022B123 /* DataListHttp.swift in Sources */,
 				D41C895C1F2AE9C100FFA440 /* DataHttp.swift in Sources */,
+				D40B7A5A1F2EE10B0099E15A /* BaseHttp.swift in Sources */,
 				D4D28CDD1F29E2FA005817F8 /* TypeCast.swift in Sources */,
 				D4D28CE51F29E7DB005817F8 /* HttpStatus.swift in Sources */,
+				D40B7A621F2EF77F0099E15A /* BookHttp.swift in Sources */,
 				D4D28CE91F29E8FB005817F8 /* Http.swift in Sources */,
 				D4D28CEC1F29F0FA005817F8 /* ErrorNo.swift in Sources */,
+				D48CE2F41F2B4ECB0022B123 /* PListReader.swift in Sources */,
+				D40B7A601F2EF3F20099E15A /* BookEntity.swift in Sources */,
 				D41C895E1F2AEA8300FFA440 /* DataListResult.swift in Sources */,
 				D4D28CF01F29F2A7005817F8 /* DataList.swift in Sources */,
 				D41C89581F2AD3F500FFA440 /* DataResult.swift in Sources */,

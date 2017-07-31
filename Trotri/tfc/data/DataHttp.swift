@@ -41,7 +41,7 @@ protocol DataHttpDelegate {
     /**
      * 打开URL链接失败后回调方法
      *
-     * @param err a Error 失败原因
+     * @param err a DataError 失败原因
      */
     func onError(err: DataError)
 }
@@ -100,7 +100,7 @@ class DataHttp {
             
             let result: DataResult = DataResult.newObject(with: data!)
             let tag: String = result.isSuccess() ? "Success" : "Error"
-            print("\(DataHttp.TAG) onComplete() \(tag), \(result)")
+            print("\(DataHttp.TAG) onComplete() \(tag), message: \(response!.description), \(result)")
             
             mDataHttpDelegateImpl.onSuccess(result: result)
         }

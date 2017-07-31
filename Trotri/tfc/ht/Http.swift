@@ -78,7 +78,7 @@ class Http {
      * @param delegate 回执线程的处理协议
      */
     public static func get(url: String, params: Dictionary<String, String>, delegate: HttpDelegate) {
-        Http.request(method: Http.METHOD_POST, url: url, params: params, delegate: delegate)
+        Http.request(method: Http.METHOD_GET, url: url, params: params, delegate: delegate)
     }
     
     /**

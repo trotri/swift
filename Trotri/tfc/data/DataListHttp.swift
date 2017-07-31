@@ -41,7 +41,7 @@ protocol DataListHttpDelegate {
     /**
      * 打开URL链接失败后回调方法
      *
-     * @param err a Error 失败原因
+     * @param err a DataError 失败原因
      */
     func onError(err: DataError)
 }
@@ -100,7 +100,7 @@ class DataListHttp {
             
             let result: DataListResult = DataListResult.newObject(with: data!)
             let tag: String = result.isSuccess() ? "Success" : "Error"
-            print("\(DataListHttp.TAG) onComplete() \(tag), \(result)")
+            print("\(DataListHttp.TAG) onComplete() \(tag), message: \(response!.description), \(result)")
             
             mDataListHttpDelegateImpl.onSuccess(result: result)
         }
