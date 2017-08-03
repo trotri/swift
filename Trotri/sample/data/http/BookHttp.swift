@@ -17,51 +17,6 @@
 import Foundation
 
 /**
- * BookHttpDelegate Delegate
- * Book回执线程的处理协议
- *
- * @since 1.0
- */
-protocol BookHttpDelegate {
-    /**
-     * Http请求成功后回调方法，HTTP状态码 = SC_OK ( 200 )，errNo = HttpErrNo.SUCCESS_NUM
-     *
-     * @param data Book实体类
-     */
-    func onSuccess(data: BookEntity)
-    
-    /**
-     * Http请求成功后回调方法，HTTP状态码 = SC_OK ( 200 )，errNo = HttpErrNo.SUCCESS_NUM
-     *
-     * @param dataList Book列表数据结构
-     */
-    func onSuccess(dataList: BookEntity.BookList)
-    
-    /**
-     * Http请求成功后回调方法，HTTP状态码 = SC_OK ( 200 )，errNo != HttpErrNo.SUCCESS_NUM
-     *
-     * @param errNo 错误码
-     * @param errMsg 错误消息
-     */
-    func onFailure(errNo: Int, errMsg: String)
-    
-    /**
-     * Http请求失败后回调方法，HTTP状态码 != SC_OK ( 200 )
-     *
-     * @param statusCode HTTP状态码
-     * @param message HTTP消息
-     */
-    func onHttpFailure(statusCode: Int, message: String)
-    
-    /**
-     * 打开URL链接失败后回调方法
-     *
-     * @param err a DataError 失败原因
-     */
-    func onError(err: DataError)
-}
-
-/**
  * BookHttp class file
  * Book HTTP类
  *
@@ -76,7 +31,7 @@ class BookHttp: BaseHttp {
      * @param id       Id
      * @param delegate 回执线程的处理协议
      */
-    public func getRow(id: UInt64, delegate: BookHttpDelegate) {
+    public func getRow(id: UInt64, delegate: BookDelegate) {
         /**
          * DataHttp Delegate
          * 回执线程的处理协议
@@ -85,13 +40,13 @@ class BookHttp: BaseHttp {
             /**
              * Book回执线程的处理协议
              */
-            let mBookHttpDelegateImpl: BookHttpDelegate
+            let mBookDelegateImpl: BookDelegate
             
             /**
              * 构造方法：初始化Book回执线程的处理协议
              */
-            init(delegate: BookHttpDelegate) {
-                mBookHttpDelegateImpl = delegate
+            init(delegate: BookDelegate) {
+                mBookDelegateImpl = delegate
             }
             
             /**
@@ -103,12 +58,12 @@ class BookHttp: BaseHttp {
                 if result.isSuccess() {
                     let data = BookEntity.newObject(with: result.getData())
                     if data != nil {
-                        mBookHttpDelegateImpl.onSuccess(data: data!)
+                        mBookDelegateImpl.onSuccess(data: data!)
                     } else {
-                        mBookHttpDelegateImpl.onFailure(errNo: ErrorNo.ERROR_RESULT_ERR, errMsg: ErrorMsg.ERROR_RESULT_ERR)
+                        mBookDelegateImpl.onFailure(errNo: ErrorNo.ERROR_RESULT_ERR, errMsg: ErrorMsg.ERROR_RESULT_ERR)
                     }
                 } else {
-                    mBookHttpDelegateImpl.onFailure(errNo: result.getErrNo(), errMsg: result.getErrMsg())
+                    mBookDelegateImpl.onFailure(errNo: result.getErrNo(), errMsg: result.getErrMsg())
                 }
             }
             
@@ -119,7 +74,7 @@ class BookHttp: BaseHttp {
              * @param message HTTP消息
              */
             func onFailure(statusCode: Int, message: String) {
-                mBookHttpDelegateImpl.onHttpFailure(statusCode: statusCode, message: message)
+                mBookDelegateImpl.onHttpFailure(statusCode: statusCode, message: message)
             }
             
             /**
@@ -128,7 +83,7 @@ class BookHttp: BaseHttp {
              * @param err a DataError 失败原因
              */
             func onError(err: DataError) {
-                mBookHttpDelegateImpl.onError(err: err)
+                mBookDelegateImpl.onError(err: err)
             }
         }
         
@@ -142,7 +97,7 @@ class BookHttp: BaseHttp {
      * @param limit    查询记录数 SELECT * FROM table LIMIT offset, [limit];
      * @param delegate 回执线程的处理协议
      */
-    public func findRows(offset: Int, limit: Int, delegate: BookHttpDelegate) {
+    public func findRows(offset: Int, limit: Int, delegate: BookDelegate) {
         /**
          * DataListHttp Delegate
          * 回执线程的处理协议
@@ -151,13 +106,13 @@ class BookHttp: BaseHttp {
             /**
              * Book回执线程的处理协议
              */
-            let mBookHttpDelegateImpl: BookHttpDelegate
+            let mBookDelegateImpl: BookDelegate
             
             /**
              * 构造方法：初始化Book回执线程的处理协议
              */
-            init(delegate: BookHttpDelegate) {
-                mBookHttpDelegateImpl = delegate
+            init(delegate: BookDelegate) {
+                mBookDelegateImpl = delegate
             }
             
             /**
@@ -168,9 +123,9 @@ class BookHttp: BaseHttp {
             func onSuccess(result: DataListResult) {
                 if result.isSuccess() {
                     let data: DataList = result.getData()
-                    mBookHttpDelegateImpl.onSuccess(dataList: BookEntity.BookList.newObject(with: data))
+                    mBookDelegateImpl.onSuccess(dataList: BookEntity.BookList.newObject(with: data))
                 } else {
-                    mBookHttpDelegateImpl.onFailure(errNo: result.getErrNo(), errMsg: result.getErrMsg())
+                    mBookDelegateImpl.onFailure(errNo: result.getErrNo(), errMsg: result.getErrMsg())
                 }
             }
             
@@ -181,7 +136,7 @@ class BookHttp: BaseHttp {
              * @param message HTTP消息
              */
             func onFailure(statusCode: Int, message: String) {
-                mBookHttpDelegateImpl.onHttpFailure(statusCode: statusCode, message: message)
+                mBookDelegateImpl.onHttpFailure(statusCode: statusCode, message: message)
             }
             
             /**
@@ -190,7 +145,7 @@ class BookHttp: BaseHttp {
              * @param err a DataError 失败原因
              */
             func onError(err: DataError) {
-                mBookHttpDelegateImpl.onError(err: err)
+                mBookDelegateImpl.onError(err: err)
             }
         }
         

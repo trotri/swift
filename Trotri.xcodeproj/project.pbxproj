@@ -13,6 +13,10 @@
 		D41C89581F2AD3F500FFA440 /* DataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41C89571F2AD3F500FFA440 /* DataResult.swift */; };
 		D41C895C1F2AE9C100FFA440 /* DataHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41C895B1F2AE9C100FFA440 /* DataHttp.swift */; };
 		D41C895E1F2AEA8300FFA440 /* DataListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41C895D1F2AEA8300FFA440 /* DataListResult.swift */; };
+		D41ED43D1F2F3317007C2AFC /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED43C1F2F3317007C2AFC /* BookService.swift */; };
+		D41ED4431F2F3C2C007C2AFC /* BookListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4411F2F3C2C007C2AFC /* BookListTableViewController.swift */; };
+		D46750791F3327B60036D60D /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46750781F3327B60036D60D /* BookDetailViewController.swift */; };
+		D467507C1F3331520036D60D /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = D467507B1F3331520036D60D /* Toast.swift */; };
 		D48CE2E71F2B0B980022B123 /* RuntimeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48CE2E61F2B0B980022B123 /* RuntimeError.swift */; };
 		D48CE2E91F2B0F160022B123 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48CE2E81F2B0F160022B123 /* DataError.swift */; };
 		D48CE2EB1F2B12640022B123 /* DataListHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48CE2EA1F2B12640022B123 /* DataListHttp.swift */; };
@@ -39,6 +43,10 @@
 		D41C89571F2AD3F500FFA440 /* DataResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataResult.swift; sourceTree = "<group>"; };
 		D41C895B1F2AE9C100FFA440 /* DataHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHttp.swift; sourceTree = "<group>"; };
 		D41C895D1F2AEA8300FFA440 /* DataListResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataListResult.swift; sourceTree = "<group>"; };
+		D41ED43C1F2F3317007C2AFC /* BookService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookService.swift; sourceTree = "<group>"; };
+		D41ED4411F2F3C2C007C2AFC /* BookListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookListTableViewController.swift; sourceTree = "<group>"; };
+		D46750781F3327B60036D60D /* BookDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		D467507B1F3331520036D60D /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		D48CE2E61F2B0B980022B123 /* RuntimeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuntimeError.swift; sourceTree = "<group>"; };
 		D48CE2E81F2B0F160022B123 /* DataError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
 		D48CE2EA1F2B12640022B123 /* DataListHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataListHttp.swift; sourceTree = "<group>"; };
@@ -90,6 +98,7 @@
 		D40B7A5B1F2EF3AC0099E15A /* sample */ = {
 			isa = PBXGroup;
 			children = (
+				D41ED43E1F2F396C007C2AFC /* view */,
 				D40B7A5C1F2EF3AC0099E15A /* data */,
 			);
 			path = sample;
@@ -100,6 +109,7 @@
 			children = (
 				D40B7A5D1F2EF3AC0099E15A /* entity */,
 				D40B7A5E1F2EF3AC0099E15A /* http */,
+				D41ED43C1F2F3317007C2AFC /* BookService.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -119,6 +129,24 @@
 			);
 			path = http;
 			sourceTree = "<group>";
+		};
+		D41ED43E1F2F396C007C2AFC /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D41ED4411F2F3C2C007C2AFC /* BookListTableViewController.swift */,
+				D46750781F3327B60036D60D /* BookDetailViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		D467507A1F33312E0036D60D /* util */ = {
+			isa = PBXGroup;
+			children = (
+				D467507B1F3331520036D60D /* Toast.swift */,
+			);
+			name = util;
+			path = Trotri/tfc/util;
+			sourceTree = SOURCE_ROOT;
 		};
 		D48CE2EC1F2B3EA90022B123 /* res */ = {
 			isa = PBXGroup;
@@ -183,6 +211,7 @@
 				D4D28CDA1F29E2B6005817F8 /* ap */,
 				D4D28CEA1F29F03E005817F8 /* data */,
 				D4D28CDB1F29E2C6005817F8 /* ht */,
+				D467507A1F33312E0036D60D /* util */,
 			);
 			path = tfc;
 			sourceTree = "<group>";
@@ -300,6 +329,7 @@
 				D49CD4201F29DC8F00DAC21B /* AppDelegate.swift in Sources */,
 				D4D28CEE1F29F13D005817F8 /* ErrorMsg.swift in Sources */,
 				D48CE2E71F2B0B980022B123 /* RuntimeError.swift in Sources */,
+				D46750791F3327B60036D60D /* BookDetailViewController.swift in Sources */,
 				D48CE2E91F2B0F160022B123 /* DataError.swift in Sources */,
 				D48CE2EB1F2B12640022B123 /* DataListHttp.swift in Sources */,
 				D41C895C1F2AE9C100FFA440 /* DataHttp.swift in Sources */,
@@ -307,13 +337,16 @@
 				D4D28CDD1F29E2FA005817F8 /* TypeCast.swift in Sources */,
 				D4D28CE51F29E7DB005817F8 /* HttpStatus.swift in Sources */,
 				D40B7A621F2EF77F0099E15A /* BookHttp.swift in Sources */,
+				D41ED4431F2F3C2C007C2AFC /* BookListTableViewController.swift in Sources */,
 				D4D28CE91F29E8FB005817F8 /* Http.swift in Sources */,
 				D4D28CEC1F29F0FA005817F8 /* ErrorNo.swift in Sources */,
 				D48CE2F41F2B4ECB0022B123 /* PListReader.swift in Sources */,
 				D40B7A601F2EF3F20099E15A /* BookEntity.swift in Sources */,
 				D41C895E1F2AEA8300FFA440 /* DataListResult.swift in Sources */,
+				D41ED43D1F2F3317007C2AFC /* BookService.swift in Sources */,
 				D4D28CF01F29F2A7005817F8 /* DataList.swift in Sources */,
 				D41C89581F2AD3F500FFA440 /* DataResult.swift in Sources */,
+				D467507C1F3331520036D60D /* Toast.swift in Sources */,
 				D4D28CF21F29F720005817F8 /* DataAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
