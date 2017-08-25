@@ -20,4 +20,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func toBrowser(_ sender: UIButton) {
+        let viewController = BrowserViewController()
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
 }
